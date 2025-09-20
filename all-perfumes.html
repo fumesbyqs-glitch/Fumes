@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fumes & Co. | All Perfumes</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #f9f9f9;
+        color: #222;
+    }
+
+    /* Header */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 30px;
+        background: #000;
+        color: #fff;
+        position: fixed;
+        /* Stick to top */
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 1000;
+    }
+
+    .header .logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 24px;
+    }
+
+    .nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 15px;
+        font-weight: 500;
+    }
+
+    .nav a:hover {
+        color: #ffd700;
+    }
+
+    /* Push content below header */
+    .shop {
+        padding: 120px 20px 60px 20px;
+        /* Added top padding = header height */
+    }
+
+    /* Mobile Responsive Header */
+    @media(max-width: 768px) {
+        .header {
+            flex-direction: column;
+            /* stack logo and nav */
+            padding: 10px 15px;
+        }
+
+        .nav {
+            margin-top: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav a {
+            margin: 5px 10px;
+            /* tighter spacing */
+            font-size: 14px;
+        }
+    }
+
+    .nav a:hover {
+        color: #ffd700;
+    }
+
+
+    /* Shop Section */
+    .shop {
+        padding: 80px 20px 60px 20px;
+        /* top, right, bottom, left */
+    }
+
+    .shop-container {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 30px;
+    }
+
+    .sidebar {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar h3 {
+        font-family: 'Playfair Display', serif;
+        margin-bottom: 15px;
+    }
+
+    .filter-group h4 {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .filter-group ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .filter-group li {
+        margin: 8px 0;
+    }
+
+    .filter-group a {
+        text-decoration: none;
+        color: #333;
+    }
+
+    .filter-group a:hover {
+        color: #ffd700;
+    }
+
+    /* Shop Grid */
+    .shop-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+    }
+
+    /* Card */
+  .card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease;
+    height: 520px;               /* fixed height */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 300px;                /* fixed width for uniform cards */
+    box-sizing: border-box;      /* include padding in width */
+}
+@media (max-width: 768px) {
+    .card {
+        width: 90%;              /* almost full width on mobile */
+        margin: 0 auto;          /* center the card */
+    }
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .card h3 {
+        margin: 15px 0 5px;
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 14px;
+        color: #555;
+    }
+
+    .card .price {
+        display: block;
+        margin: 10px 0;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background: #ffd700;
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 25px;
+        transition: background 0.3s ease;
+        text-align: center;
+    }
+
+    .btn:hover {
+        background: #fff;
+        border: 1px solid #ffd700;
+    }
+
+    /* Footer */
+    .footer {
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer .social-icons a {
+        color: #fff;
+        margin: 0 10px;
+        font-size: 18px;
+    }
+
+    .footer .social-icons a:hover {
+        color: #ffd700;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25d366;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 30px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .whatsapp-float:hover {
+        background-color: #20b955;
+    }
+
+    /* Responsive */
+    @media(max-width: 992px) {
+        .shop-container {
+            grid-template-columns: 1fr;
+        }
+
+        .sidebar {
+            margin-bottom: 30px;
+        }
+    }
+</style>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Fumes & Co.</div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="all-perfumes.html" class="active">All Perfumes</a>
+            <a href="index.html#about-contact">About Us</a>
+            <a href="index.html#contact-info">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Shop Section -->
+    <section class="shop">
+        <div class="shop-container">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3>Filter By</h3>
+                <div class="filter-group">
+                    <h4>Category</h4>
+                    <ul>
+                        <li><a href="#" data-gender="all">All</a></li>
+                        <li><a href="#" data-gender="men">Men</a></li>
+                        <li><a href="#" data-gender="women">Women</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Products Grid -->
+            <div class="shop-grid" id="productGrid">
+                <!-- Dynamic Cards -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Fumes & Co. | Elegance in a Bottle</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-pinterest"></i></a>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/15551234567" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const perfumes = [
+            {
+                name: 'Gucci Flora 30ml',
+                description: 'Notes of Bergamot, Jasmine & Sandalwood',
+                price: 'Rs. 850',
+                image: 'gucci flora.png',
+                gender: 'women'
+            },
+            {
+                name: 'Azzaro Wanted 30ml',
+                description: 'Amber, Vanilla & Rose Essence',
+                price: 'Rs. 800',
+                image: 'azzard wanted.jpg',
+                gender: 'men'
+            },
+            {
+                name: 'Zarar Gold 30ml',
+                description: 'Citrus, Lavender & Patchouli',
+                price: 'Rs. 850',
+                image: 'zarar.jpg',
+                gender: 'men'
+            },
+            {
+                name: 'Bleu de Chanel 30ml',
+                description: 'Rich Oud, Spices & Amber',
+                price: 'Rs. 1000',
+                image: 'blu channel.png',
+                gender: 'men'
+            },
+            {
+                name: 'Azzaro Wanted 3ml',
+                description: 'Rich Oud, Spices & Amber',
+                price: 'Rs. 300',
+                image: 'azzaro wanted 3ml.png',
+                gender: 'men'
+            },
+            {
+                name: 'Dunhill Desire 3ml',
+                description: 'Rich Oud, Spices & Amber',
+                price: 'Rs. 300',
+                image: 'dunhil desire 3ml.png',
+                gender: 'men'
+            },
+            {
+                name: 'Invictus 3ml',
+                description: 'Rich Oud, Spices & Amber',
+                price: 'Rs. 300',
+                image: 'invictus.png',
+                gender: 'men'
+            },
+            {
+                name: 'Versace 3ml',
+                description: 'Rich Oud, Spices & Amber',
+                price: 'Rs. 300',
+                image: 'virschi.png',
+                gender: 'men'
+            },
+            {
+                name: 'Zarar Gold 3ml',
+                description: 'Rich Oud, Spices & Amber',
+                price: 'Rs. 300',
+                image: 'zara gold 3ml.png',
+                gender: 'men'
+            }
+            
+        ];
+
+        const productGrid = document.getElementById('productGrid');
+        const filterLinks = document.querySelectorAll('.filter-group a');
+
+        function displayPerfumes(filter) {
+            productGrid.innerHTML = '';
+            perfumes
+                .filter(p => filter === 'all' || p.gender === filter)
+                .forEach(p => {
+                    const card = `
+            <div class="card">
+              <img src="${p.image}" alt="${p.name}">
+              <h3>${p.name}</h3>
+              <p>${p.description}</p>
+              <span class="price">${p.price}</span>
+              <a href="https://wa.me/923137974435?text=I%20want%20to%20buy%20${encodeURIComponent(p.name)}" class="btn">Buy on WhatsApp</a>
+            </div>
+          `;
+                    productGrid.insertAdjacentHTML('beforeend', card);
+                });
+        }
+
+        filterLinks.forEach(link => {
+            link.addEventListener('click', e => {
+                e.preventDefault();
+                const gender = link.dataset.gender;
+                displayPerfumes(gender);
+            });
+        });
+
+        // Initial load
+        displayPerfumes('all');
+    </script>
+</body>
+
+</html>
