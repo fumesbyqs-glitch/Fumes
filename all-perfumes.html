@@ -166,10 +166,28 @@ body {
 .footer { background:var(--black); color:#fff; text-align:center; padding:20px; margin-top:30px }
 .social-icons a { color:#fff; margin:0 8px; font-size:18px }
 .social-icons a:hover { color:var(--gold) }
-.whatsapp-float {
-  position:fixed; width:56px; height:56px; bottom:18px; right:18px; background:#25d366; color:#fff; border-radius:50%;
-  display:flex; align-items:center; justify-content:center; z-index:1200; box-shadow:0 6px 20px rgba(0,0,0,0.2);
-}
+/* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #20b955;
+    }
 
 /* ---------- Responsive layout ---------- */
 @media (max-width:992px){
@@ -240,7 +258,7 @@ body {
     <p>&copy; 2025 Fumes & Co. | Elegance in a Bottle</p>
     <div class="social-icons" aria-hidden="false">
       <a href="https://www.instagram.com/fumes_and_co/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-      <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.facebook.com/profile.php?id=61581355073827" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
       <a href="https://wa.me/923137974435" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
   </footer>
@@ -384,5 +402,6 @@ body {
   </noscript>
 </body>
 </html>
+
 
 
