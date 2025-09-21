@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /admin/
+Allow: /
+Sitemap: https://fumesbyqs-glitch.github.io/Fumes/sitemap.xml
