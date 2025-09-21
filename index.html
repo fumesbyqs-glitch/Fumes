@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-28Y2LE6S3W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-28Y2LE6S3W');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fumes & Co. – Luxury Perfumes in Pakistan</title>
+
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Fumes & Co. offers premium attars and luxury perfumes at affordable prices in Pakistan. Long-lasting, elegant scents for men and women.">
+  <meta name="keywords" content="Perfume Pakistan, Attar Pakistan, Fumes & Co., Luxury Perfumes, Long-lasting Perfume, Buy Perfume Online Pakistan">
+  <meta name="author" content="Fumes & Co.">
+
+  <!-- Open Graph (Facebook / WhatsApp) -->
+  <meta property="og:title" content="Fumes & Co. – Luxury Perfumes in Pakistan">
+  <meta property="og:description" content="Premium attars and luxury perfumes at affordable prices. Long-lasting, elegant scents for men and women.">
+  <meta property="og:image" content="https://fumesbyqs-glitch.github.io/Fumes/banner%20img.png">
+  <meta property="og:url" content="https://fumesbyqs-glitch.github.io/Fumes/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fumes & Co. – Luxury Perfumes in Pakistan">
+  <meta name="twitter:description" content="Premium attars and luxury perfumes at affordable prices. Long-lasting, elegant scents for men and women.">
+  <meta name="twitter:image" content="https://fumesbyqs-glitch.github.io/Fumes/banner%20img.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #f9f9f9;
+      color: #222;
+      scroll-behavior: smooth;
+    }
+
+    /* Header */
+    .header {
+      background: #000;
+      color: #fff;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #fff;
+    }
+
+    .nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 10px 0;
+    }
+
+    .nav a:hover {
+      color: #ffd700;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 26px;
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .hero, .products, .about-contact {
+      padding-top: 100px;
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: #000;
+        padding: 10px 0;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+      }
+
+      .nav.active {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .header-container {
+        justify-content: space-between;
+      }
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url('banner%20img.png') center/cover no-repeat;
+      height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+
+    .hero-text {
+      position: relative;
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      font-weight: 700;
+      color: #ffd700;
+      line-height: 1.2;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+      margin: 0 0 15px 0;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      color: #ffffff;
+      line-height: 1.6;
+      margin: 0 auto 30px auto;
+      max-width: 600px;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 40vh;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+      }
+
+      .hero-text p {
+        font-size: 16px;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #ffd700;
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 25px;
+      transition: background 0.3s ease;
+      margin-bottom: 50px;
+    }
+
+    .btn:hover {
+      background: #fff;
+    }
+
+    /* Products */
+    .products {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .products h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin: 15px 0 5px;
+      font-size: 22px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .card .price {
+      display: block;
+      margin: 10px 0;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    /* About Us & Contact */
+    .about-contact {
+      background: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .about-contact h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .about-contact p {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    /* CEO Section */
+    .ceo-section {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    .ceo {
+      text-align: center;
+    }
+
+    .ceo img {
+      width: 220px;
+      height: 280px;
+      object-fit: cover;
+      object-position: center 20%;
+      border-radius: 50% / 35%;
+      border: 3px solid #ffd700;
+      animation: pulse 2s infinite;
+    }
+
+    .ceo h4 {
+      margin-top: 10px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    @keyframes pulse {
+      0% {box-shadow: 0 0 0 0 rgba(255,215,0, 0.5);}
+      70% {box-shadow: 0 0 0 15px rgba(255,215,0, 0);}
+      100% {box-shadow: 0 0 0 0 rgba(255,215,0, 0);}
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      font-size: 16px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .footer .social-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 18px;
+    }
+
+    .footer .social-icons a:hover {
+      color: #ffd700;
+    }
+
+    /* WhatsApp Floating Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .whatsapp-float:hover {
+      background-color: #20b955;
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-container">
+    <div class="logo">Fumes & Co.</div>
+
+    <nav class="nav" id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="all-perfumes.html">All Perfumes</a>
+      <a href="#about-contact">About Us</a>
+      <a href="#contact-info">Contact</a>
+    </nav>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Elegance in a Bottle</h1>
+    <p>Discover luxury perfumes crafted from the world's finest ingredients.</p>
+    <a href="all-perfumes.html" class="btn">Shop All Scents</a>
+  </div>
+</section>
+
+<section class="products">
+  <h2>Featured Perfumes</h2>
+  <div class="product-grid">
+    <div class="card">
+      <img src="blu channel.png" alt="BLEU DE CHANEL Perfume 30ml - Fumes & Co.">
+      <h3>BLEU DE CHANEL</h3>
+      <p>Rich notes of Oudh, Amber & Musk</p>
+      <span class="price">Rs. 1200</span>
+      <a href="https://wa.me/923137974435?text=I%20want%20to%20buy%20BLEU%20DE%20CHANEL%2030ml" class="btn">Buy on WhatsApp</a>
+    </div>
+
+    <div class="card">
+      <img src="gucci flora.png" alt="GUCCI FLORA Perfume 30ml - Fumes & Co.">
+      <h3>GUCCI FLORA</h3>
+      <p>Fresh blend of Peony, Citrus & Rose Essence</p>
+      <span class="price">Rs. 1000</span>
+      <a href="https://wa.me/923137974435?text=I%20want%20to%20buy%20GUCCI%20FLORA%2030ml" class="btn">Buy on WhatsApp</a>
+    </div>
+
+    <div class="card">
+      <img src="azzard wanted.jpg" alt="AZZARO WANTED Perfume 30ml - Fumes & Co.">
+      <h3>AZZARO WANTED</h3>
+      <p>Spicy mix of Lemon, Cardamom & Tonka Bean</p>
+      <span class="price">Rs. 1000</span>
+      <a href="https://wa.me/923137974435?text=I%20want%20to%20buy%20AZZARO%20WANTED%2030ml" class="btn">Buy on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="about-contact" class="about-contact">
+  <h2>About Us</h2>
+  <p>Fumes & Co. is a premium perfume brand offering attars and perfumes at reasonable prices with long-lasting fragrances. We craft scents that reflect luxury and elegance.</p>
+
+  <div class="ceo-section">
+    <div class="ceo">
+      <img src="qasim.png" alt="M.Qasim Habib - CEO Fumes & Co.">
+      <h4>M.Qasim Habib - CEO</h4>
+    </div>
+    <div class="ceo">
+      <img src="salman.png" alt="Abdullah Salman - CEO Fumes & Co.">
+      <h4>Abdullah Salman - CEO</h4>
+    </div>
+  </div>
+
+  <h2>Contact</h2>
+  <div id="contact-info" class="contact-info">
+    <p><strong>Email:</strong> fumesbyqs@gmail.com</p>
+    <p><strong>Phone:</strong> +92 313 7974435</p>
+    <p><strong>Location:</strong> Jhang, Punjab, Pakistan</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>&copy; 2025 Fumes & Co. | Elegance in a Bottle</p>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/fumes_and_co/"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="https://wa.me/923137974435"><i class="fab fa-whatsapp"></i></a>
+  </div>
+</footer>
+
+<a href="https://wa.me/923137974435" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    menuToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Lazy loading for all images
+    document.querySelectorAll("img").forEach(img => {
+      img.setAttribute("loading", "lazy");
+    });
+  });
+</script>
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Fumes & Co.",
+  "image": "https://fumesbyqs-glitch.github.io/Fumes/banner%20img.png",
+  "url": "https://fumesbyqs-glitch.github.io/Fumes/",
+  "telephone": "+92 313 7974435",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Jhang",
+    "addressLocality": "Punjab",
+    "addressCountry": "Pakistan"
+  },
+  "sameAs": [
+    "https://instagram.com/youraccount",
+    "https://facebook.com/youraccount",
+    "https://wa.me/923137974435"
+  ]
+}
+</script>
+
+</body>
+</html>
